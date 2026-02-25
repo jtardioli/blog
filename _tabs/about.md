@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-I'm a Web3 auditor and engineer (and I guess now a writer). These days I'm mostly interested in stealing internet money.
+I'm a Web3 security researcher and engineer (and I guess now a writer). These days I'm mostly interested in stealing internet money.
 
 You can expect protocol deep dives, bug breakdowns, experiments in digital minimalism, and the occasional rant on whatever's on my mind.
 
