@@ -7,6 +7,8 @@ date: 2026-02-25 14:40 -0500
 image:
   path: /assets/img/protocols/compoundv2.png
   alt: Compound V2
+series: "Compound V2"
+series_index: 1
 ---
 
 ## Why Compound V2

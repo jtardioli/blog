@@ -16,3 +16,18 @@
   object-fit: cover;
   object-position: center 35%;
 }
+
+/* Series navigation */
+.series-nav {
+  background-color: var(--card-bg) !important;
+  border-color: var(--btn-border-color);
+
+  .btn-outline-primary {
+    --bs-btn-color: var(--link-color);
+    --bs-btn-border-color: var(--link-color);
+    --bs-btn-hover-bg: var(--link-color);
+    --bs-btn-hover-border-color: var(--link-color);
+    --bs-btn-active-bg: var(--link-color);
+    --bs-btn-active-border-color: var(--link-color);
+  }
+}
