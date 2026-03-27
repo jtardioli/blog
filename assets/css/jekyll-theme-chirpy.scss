@@ -57,7 +57,7 @@ html:not([data-mode]) {
   --avatar-border-color: #BB5591;
 
   /* Topbar */
-  --topbar-bg: rgba(10, 10, 18, 0.85);
+  --topbar-bg: var(--main-bg);
   --topbar-text-color: #c8d0e0;
   --search-border-color: #1a1a2e;
   --search-icon-color: #6a6a8a;
@@ -162,10 +162,21 @@ h2, h3 {
     0 0 20px rgba(187, 85, 145, 0.1);
 }
 
-/* Glowing links */
-a:hover {
+/* Override theme's hardcoded orange (#d2603a) link hover */
+a:hover,
+.content a:not(.img-link):hover,
+.post-meta a:not([class]):hover,
+.categories a:hover,
+.post-tag:hover,
+footer a:hover,
+#topbar-title:hover,
+#search-results a:hover,
+#access-lastmod a:hover {
+  color: #d077ab !important;
+  border-bottom-color: transparent !important;
   text-shadow: 0 0 8px rgba(187, 85, 145, 0.6);
-  transition: text-shadow 0.3s ease;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
 }
 
 /* Sidebar neon accents */
@@ -180,9 +191,7 @@ a:hover {
   }
 
   .site-subtitle {
-    text-shadow:
-      0 0 8px rgba(0, 229, 255, 0.5),
-      0 0 20px rgba(0, 229, 255, 0.2);
+    text-shadow: 0 0 6px rgba(0, 229, 255, 0.2);
   }
 
   .nav-link {
@@ -210,7 +219,22 @@ a:hover {
 /* Card neon glow */
 .card, .post-preview {
   border: 1px solid rgba(187, 85, 145, 0.15) !important;
-  transition: all 0.3s ease;
+  overflow: hidden;
+  transition: all 0.15s ease;
+
+  &, & * {
+    border-radius: 0.75rem !important;
+  }
+
+  & > :first-child {
+    border-top-left-radius: 0.75rem !important;
+    border-top-right-radius: 0.75rem !important;
+  }
+
+  & > :last-child {
+    border-bottom-left-radius: 0.75rem !important;
+    border-bottom-right-radius: 0.75rem !important;
+  }
 
   &:hover {
     border-color: rgba(187, 85, 145, 0.4) !important;
@@ -254,10 +278,11 @@ body::after {
   );
 }
 
-/* Topbar glow */
+/* Topbar — blend seamlessly with background */
 #topbar-wrapper {
-  border-bottom: 1px solid rgba(187, 85, 145, 0.2);
-  box-shadow: 0 2px 15px rgba(187, 85, 145, 0.1);
+  border-bottom: none;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 /* Search input glow on focus */
